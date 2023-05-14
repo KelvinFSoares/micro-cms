@@ -1,6 +1,6 @@
-## Outliant FE Test
+## Alto FE Test
 
-### Tech stack: Vite + React + TS + Tailwind
+### Tech stack: Vite + React + TS + Tailwind + atomic design
 
 ## Running locally
 
