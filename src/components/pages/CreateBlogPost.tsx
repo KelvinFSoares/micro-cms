@@ -1,19 +1,13 @@
 import { usePost } from '@/hooks/usePost';
 import BlogPostForm from '../organisms/BlogPostForm';
 import MainTemplate from '../templates/Main';
-import { useNavigate } from 'react-router-dom';
 
 export const CreateBlogPost = () => {
-  const { addPost, onSearchPosts } = usePost();
-  const navigate = useNavigate();
+  const { addPost } = usePost();
+
   return (
     <>
-      <MainTemplate
-        onSearch={onSearchPosts}
-        onSearchResultClick={(post) => {
-          navigate('/blog/' + post.id);
-        }}
-      >
+      <MainTemplate>
         <BlogPostForm onSubmit={addPost} />
       </MainTemplate>
     </>

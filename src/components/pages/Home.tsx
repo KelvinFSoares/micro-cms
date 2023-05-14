@@ -2,21 +2,11 @@ import SimpleText from '../atoms/SimpleText';
 import VideoIFrame from '../atoms/VideoIFrame';
 import ImageRow from '../molecules/ImageRow';
 import ImageText from '../molecules/ImageText';
-import { useNavigate } from 'react-router-dom';
 import MainTemplate from '../templates/Main';
-import { usePost } from '@/hooks/usePost';
 
 export const Home = () => {
-  const navigate = useNavigate();
-  const { onSearchPosts } = usePost();
-
   return (
-    <MainTemplate
-      onSearch={onSearchPosts}
-      onSearchResultClick={(post) => {
-        navigate('/blog/' + post.id);
-      }}
-    >
+    <MainTemplate>
       <div className="flex">
         <div className="w-1/2 py-16 mr-8">
           <SimpleText size="sm" color="black">

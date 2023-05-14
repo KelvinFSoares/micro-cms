@@ -1,21 +1,11 @@
-import { useNavigate } from 'react-router-dom';
 import SimpleText from '../atoms/SimpleText';
 import MainTemplate from '../templates/Main';
-import { usePost } from '@/hooks/usePost';
 
 export const About = () => {
-  const navigate = useNavigate();
-  const { onSearchPosts } = usePost();
-
   return (
-    <MainTemplate
-      onSearch={onSearchPosts}
-      onSearchResultClick={(post) => {
-        navigate('/blog/' + post.id);
-      }}
-    >
+    <MainTemplate>
       <h1 className="text-3xl">About US</h1>
-      <div className="flex h-full">
+      <div className="flex">
         <div className="w-1/2 ">
           <SimpleText size="sm" color="black">
             Lorem Ipsum is simply dummy text of the printing and typesetting

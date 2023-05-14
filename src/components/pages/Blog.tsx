@@ -6,15 +6,10 @@ import { usePost } from '@/hooks/usePost';
 
 export const Blog = () => {
   const navigate = useNavigate();
-  const { posts, onSearchPosts } = usePost();
+  const { posts } = usePost();
 
   return (
-    <MainTemplate
-      onSearch={onSearchPosts}
-      onSearchResultClick={(post) => {
-        navigate('/blog/' + post.id);
-      }}
-    >
+    <MainTemplate>
       <div className="w-full flex justify-center p-8">
         <Button
           label="Create new Post"
