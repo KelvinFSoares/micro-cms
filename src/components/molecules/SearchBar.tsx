@@ -8,30 +8,27 @@ interface SearchBarProps extends React.ComponentPropsWithoutRef<'div'> {
   onSearch: (searchParam: string) => any;
   onResultClick: (resultObject: any) => any;
   searchLabel: string;
+  placeholder?: string;
 }
+
+type Timer = ReturnType<typeof setTimeout>;
 
 const SearchBar: FunctionComponent<SearchBarProps> = ({
   onSearch,
   onResultClick,
   searchLabel,
+  placeholder,
 }) => {
-  const inputRef = useRef(null);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [timer, setTimer] = useState<Timer>();
   const [results, setResults] = useState([]);
 
-  useEffect(() => {
-    const timerId = setTimeout(() => {
-      if (searchTerm) {
-        setResults(() => onSearch(inputRef.current.value));
-      } else {
-        setResults(() => []);
-      }
+  const onSearchDebounced = (searchParam: string) => {
+    const newTimer = setTimeout(() => {
+      const result = onSearch(searchParam);
+      setResults(() => result);
     }, 500);
-    return () => clearTimeout(timerId);
-  }, [searchTerm]);
-
-  const handleInputChange = () => {
-    setSearchTerm(inputRef.current.value);
+    clearTimeout(timer);
+    setTimer(newTimer);
   };
 
   return (
@@ -41,18 +38,16 @@ const SearchBar: FunctionComponent<SearchBarProps> = ({
       </Label>
       <div className="flex">
         <TextInput
-          placeholder="ENTER KEYWORD"
+          placeholder={placeholder}
           id="searchInput"
-          value={searchTerm}
-          onChange={handleInputChange}
-          innerRef={inputRef}
+          onChange={(e) => onSearchDebounced(e.target.value)}
         />
       </div>
       <div className="relative">
-        {results.length > 0 && (
+        {results?.length > 0 && (
           <ListPanel>
             {results.map((result) => (
-              <ListPanelItem key={result.title}>
+              <ListPanelItem key={result.title + '' + result.id}>
                 <span
                   className="ml-2 text-black"
                   onClick={() => onResultClick(result)}

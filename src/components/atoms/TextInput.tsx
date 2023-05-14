@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react';
 
 interface TextInputProps extends React.ComponentPropsWithoutRef<'input'> {
   placeholder: string;
-  innerRef: React.LegacyRef<HTMLInputElement>;
+  innerRef?: React.LegacyRef<HTMLInputElement>;
 }
 
 const TextInput: FunctionComponent<TextInputProps> = ({

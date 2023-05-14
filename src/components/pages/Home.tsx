@@ -21,7 +21,7 @@ export const Home = () => {
           <VideoIFrame
             videoUrl="https://www.youtube.com/watch?v=swgSKdVjxjE"
             iframeWidth="40"
-            iframeHeight="40"
+            iframeHeight="110"
             title="Youtube example title"
           />
         </div>

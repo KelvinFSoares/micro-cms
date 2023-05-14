@@ -41,6 +41,8 @@ export function PostsProvider({ children }: { children: React.ReactNode }) {
   const onSearchPosts = (searchParam: string) => {
     if (searchParam !== '') {
       return posts.filter((post) => post.title.includes(searchParam));
+    } else {
+      return [];
     }
   };
 
