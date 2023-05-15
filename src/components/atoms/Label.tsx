@@ -1,6 +1,6 @@
 import { FunctionComponent, ReactNode } from 'react';
 
-interface LabelProps extends React.ComponentPropsWithoutRef<'label'> {
+export interface LabelProps extends React.ComponentPropsWithoutRef<'label'> {
   fontSize: string;
   color: string;
   children: ReactNode;

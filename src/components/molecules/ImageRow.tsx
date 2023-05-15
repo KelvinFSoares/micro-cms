@@ -6,7 +6,7 @@ export type ImageRowObject = {
   alt: string;
 };
 
-interface ImageRowProps extends React.ComponentPropsWithoutRef<'div'> {
+export interface ImageRowProps extends React.ComponentPropsWithoutRef<'div'> {
   imagesData: ImageRowObject[];
 }
 

@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
 
-interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
+export interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
   label: string;
 }
 

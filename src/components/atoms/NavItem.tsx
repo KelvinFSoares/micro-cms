@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
 
-interface NavItemProps extends React.ComponentPropsWithoutRef<'a'> {
+export interface NavItemProps extends React.ComponentPropsWithoutRef<'a'> {
   label: string;
 }
 

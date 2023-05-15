@@ -1,6 +1,6 @@
 import { FunctionComponent, ReactNode } from 'react';
 
-interface ListPanelProps extends React.ComponentPropsWithoutRef<'ul'> {
+export interface ListPanelProps extends React.ComponentPropsWithoutRef<'ul'> {
   children: ReactNode;
 }
 

@@ -1,6 +1,7 @@
 import { ReactNode, FunctionComponent } from 'react';
 
-interface ListPanelItemProps extends React.ComponentPropsWithoutRef<'li'> {
+export interface ListPanelItemProps
+  extends React.ComponentPropsWithoutRef<'li'> {
   key: string;
   children: ReactNode;
 }

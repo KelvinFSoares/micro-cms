@@ -2,7 +2,8 @@ import { FunctionComponent } from 'react';
 import Image from '../atoms/Image';
 import SimpleText from '../atoms/SimpleText';
 
-interface BlogPostCardProps extends React.ComponentPropsWithoutRef<'div'> {
+export interface BlogPostCardProps
+  extends React.ComponentPropsWithoutRef<'div'> {
   title: string;
   thumbnail: string;
 }

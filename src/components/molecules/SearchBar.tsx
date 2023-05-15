@@ -4,7 +4,7 @@ import TextInput from '../atoms/TextInput';
 import ListPanelItem from '../atoms/ListPanelItem';
 import ListPanel from '../atoms/ListPanel';
 
-interface SearchBarProps extends React.ComponentPropsWithoutRef<'div'> {
+export interface SearchBarProps extends React.ComponentPropsWithoutRef<'div'> {
   onSearch: (searchParam: string) => any;
   onResultClick: (resultObject: any) => any;
   searchLabel: string;

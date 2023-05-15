@@ -1,6 +1,6 @@
 import { ReactNode, FunctionComponent } from 'react';
 
-interface SimpleTextProps extends React.ComponentPropsWithoutRef<'p'> {
+export interface SimpleTextProps extends React.ComponentPropsWithoutRef<'p'> {
   size: string;
   color: string;
   children: ReactNode;

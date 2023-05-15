@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
 
-interface PreviewTextProps extends React.ComponentPropsWithoutRef<'p'> {
+export interface PreviewTextProps extends React.ComponentPropsWithoutRef<'p'> {
   text: string;
   charLimit: number;
   size: string;

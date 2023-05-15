@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
 
-interface ImageProps extends React.ComponentPropsWithoutRef<'img'> {
+export interface ImageProps extends React.ComponentPropsWithoutRef<'img'> {
   width: string;
   height: string;
 }

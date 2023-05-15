@@ -2,7 +2,8 @@ import SimpleText from '../atoms/SimpleText';
 import Image from '../atoms/Image';
 import { FunctionComponent } from 'react';
 
-interface HeroSectionProps extends React.ComponentPropsWithoutRef<'div'> {
+export interface HeroSectionProps
+  extends React.ComponentPropsWithoutRef<'div'> {
   classNames: string;
 }
 
