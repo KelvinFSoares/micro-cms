@@ -47,6 +47,7 @@ const SearchBar: FunctionComponent<SearchBarProps> = ({
         {results?.length > 0 && (
           <ListPanel>
             {results.map((result) => (
+              //this is not good
               <ListPanelItem key={result.title + '' + result.id}>
                 <span
                   className="ml-2 text-black"

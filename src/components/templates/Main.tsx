@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { usePost } from '@/hooks/usePost';
 
 const MainTemplate = ({ children }) => {
+  // this is not good, should create a HOC to inject these props from outside
   const navigate = useNavigate();
   const { onSearchPosts } = usePost();
 
