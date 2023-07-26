@@ -5,13 +5,13 @@
 Clone the project
 
 ```bash
-  git clone https://github.com/KelvinFSoares/outliant-test
+  git clone https://github.com/KelvinFSoares/micro-cms
 ```
 
 Enter the project directory
 
 ```bash
-  cd outliant-test
+  cd micro-cms
 ```
 
 Install the dependencies
