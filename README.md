@@ -1,5 +1,3 @@
-## Alto FE Test
-
 ### Tech stack: Vite + React + TS + Tailwind + atomic design
 
 ## Running locally
